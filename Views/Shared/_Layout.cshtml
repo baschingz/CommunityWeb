@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html ng-app="myapp">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CommunityWeb</title>
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/style.css" />
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/LoginStyle.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Kanit:200,300,400" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Yantramanav:100,300,400,500,700" rel="stylesheet">
+    </environment>
+    <environment exclude="Development">
+
+
+    </environment>
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light border-nav">
+        <span class="navbar-brand mb-0 h1">
+            <img src="~/images/logo/Logo_G-ABLE.png" class="logo">
+            <span class="font">COMMUNITY</span>
+        </span>
+        <ul class="nav justify-content-end">
+            <li class="nav-item">
+                <a class="nav-link" asp-controller="Home" asp-action="Index">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="answer.html">Answers</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Help.html">Help</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" asp-controller="Login" asp-action="Login">Login</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div>
+        @RenderBody()
+        <hr />
+
+        <div class="footer">
+            <p class="top7">&#9400; G-ABLE Community</p>
+        </div>
+    </div>
+
+    <environment include="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
+        </script>
+        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
+        </script>
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+    </environment>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
