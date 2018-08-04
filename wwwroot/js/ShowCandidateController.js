@@ -1,5 +1,4 @@
-﻿var app = angular.module("myapp", []);
-
+﻿
 app.controller("ShowCandidateController", function ($scope, $http) {
     $scope.employees = typeof employees != "undefined" ? employees ? employees : null : null;
     $scope.init = function () {
@@ -14,7 +13,7 @@ app.controller("ShowCandidateController", function ($scope, $http) {
                 alert('ดึงรายชื่อไม่สำเร็จ');
             }
         }, function (response) {
-            debugger;
+            //debugger;
             alert('fail');
         });
     }

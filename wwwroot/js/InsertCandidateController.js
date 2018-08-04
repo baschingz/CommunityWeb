@@ -1,4 +1,4 @@
-﻿var app = angular.module("myapp", []);
+﻿
 app.controller("InsertCandidateController", function ($scope, $http) {
     $scope.registerForm = {
         email: '',

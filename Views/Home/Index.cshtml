@@ -103,11 +103,13 @@
             <div class="col-md-4">
                 <div class="container1">
                     <img src="~/images/icon/ad1.jpg" class="ad">
-                    <button class="btn2">Get Start</button>
+                    <button asp-controller="Home" asp-action="Index" class="btn2">Get Start</button>
                 </div>
-                <div class="container1 top6">
-                    <img src="~/images/icon/ad2.jpg" class="ad">
-                </div>
+                <a href="#">
+                    <div class="container1 top6">
+                        <img ng-click="customerfocus()" src="~/images/icon/ad2.jpg" class="ad">
+                    </div>
+                </a>
             </div>
 
             <!--Colllaborate-->

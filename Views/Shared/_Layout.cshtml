@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html ng-app="myapp">
+<html ng-app="myapp"  ng-controller="MainController">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,7 +8,8 @@
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/style.css" />
-        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/LoginStyle.css" />
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/login-style.css" />
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/profile-style.css" />
         <link rel="stylesheet" href="~/css/site.css" />
 
 
@@ -16,6 +17,7 @@
         <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Kanit:200,300,400" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Yantramanav:100,300,400,500,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     </environment>
     <environment exclude="Development">
 
@@ -23,30 +25,51 @@
     </environment>
 </head>
 <body>
-    <nav class="navbar navbar-light bg-light border-nav">
-        <span class="navbar-brand mb-0 h1">
-            <img src="~/images/logo/Logo_G-ABLE.png" class="logo">
-            <span class="font">COMMUNITY</span>
-        </span>
-        <ul class="nav justify-content-end">
-            <li class="nav-item">
-                <a class="nav-link" asp-controller="Home" asp-action="Index">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="answer.html">Answers</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="Help.html">Help</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" asp-controller="Login" asp-action="Login">Login</a>
-            </li>
-        </ul>
-    </nav>
+    <div ng-init="init()">
+        <nav class="navbar navbar-light bg-light border-nav">
+            <a class="nav-link" asp-controller="Home" asp-action="Index">
+                <span class="navbar-brand mb-0 h1">
+                    <img src="~/images/logo/Logo_G-ABLE.png" class="logo">
+                    <span class="font">COMMUNITY</span>
+                </span>
+            </a>
+            <ul class="nav justify-content-end">
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="Home" asp-action="Index">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="answer.html">Answers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Help.html">Help</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" ng-show="checked !== 'app'" href="#">Customer Focus</a>
+                        <a class="dropdown-item" ng-show="checked === 'app'" href="/candidate/showcandidate">Customer Focus</a>
+                        <a class="dropdown-item" href="#">Growth</a>
+                        <a class="dropdown-item" href="#">Excellence</a>
+                        <a class="dropdown-item" href="#">Teamwork</a>
+                        <a class="dropdown-item" href="#">Ownership</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a ng-show="checked !== 'app'" class="nav-link" asp-controller="Login" asp-action="Login">Login</a>
+                    <a ng-show="checked === 'app'" class="nav-link" ng-click="logout()" asp-controller="" asp-action="">Logout</a>
+                </li>
+                @*<li class="nav-item">
+            <span ng-show="checked === 'app'">{{currentUser.username}}</span>
+        </li>*@
+            </ul>
+        </nav>
+    </div>
 
     <div>
         @RenderBody()
-        <hr />
+
 
         <div class="footer">
             <p class="top7">&#9400; G-ABLE Community</p>
@@ -74,6 +97,8 @@
         <script src="~/js/site.min.js" asp-append-version="true"></script>
     </environment>
 
+    <script src="~/js/app.js"></script>
+    <script src="~/js/MainController.js"></script>
     @RenderSection("Scripts", required: false)
 </body>
 </html>
