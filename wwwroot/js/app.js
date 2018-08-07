@@ -9,11 +9,11 @@ function AuthenticationService($http) {
     return service;
 
     function Login(username, password, callback) {
-        debugger;
+        //debugger;
         if (username && password) {
             $http.post('https://localhost:44351/api/Login', { username: username, password: password })
                 .then(function (response) {
-                    debugger;
+                    //debugger;
                     if (response.data) {
                         localStorage.currentUser = JSON.stringify({ username: username, role: response.data.userAuth.role, app: response.data.userAuth.app, token: response.data.token });
                         $http.defaults.headers.common.Authorization = 'Bearer ' + response.data.token;

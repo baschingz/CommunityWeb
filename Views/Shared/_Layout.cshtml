@@ -43,7 +43,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="Help.html">Help</a>
                 </li>
-                <li class="nav-item dropdown">
+                @*<li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Dropdown
                     </a>
@@ -55,7 +55,7 @@
                         <a class="dropdown-item" href="#">Teamwork</a>
                         <a class="dropdown-item" href="#">Ownership</a>
                     </div>
-                </li>
+                </li>*@
                 <li class="nav-item">
                     <a ng-show="checked !== 'app'" class="nav-link" asp-controller="Login" asp-action="Login">Login</a>
                     <a ng-show="checked === 'app'" class="nav-link" ng-click="logout()" asp-controller="" asp-action="">Logout</a>

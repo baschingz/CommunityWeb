@@ -27,7 +27,5 @@ C:\Users\Lenovo\source\repos\CommunityWeb\CommunityWeb\obj\Debug\netcoreapp2.1\C
 C:\Users\Lenovo\source\repos\CommunityWeb\CommunityWeb\obj\Debug\netcoreapp2.1\CommunityWeb.pdb
 C:\Users\Lenovo\source\repos\CommunityWeb\CommunityWeb\obj\Debug\netcoreapp2.1\CommunityWeb.csproj.CopyComplete
 C:\Users\Lenovo\source\repos\CommunityWeb\CommunityWeb\obj\Debug\netcoreapp2.1\Razor\Views\Login\Login.g.cshtml.cs
-C:\Users\Lenovo\source\repos\CommunityWeb\CommunityWeb\obj\Debug\netcoreapp2.1\Razor\Views\Candidate\InsertCandidate.g.cshtml.cs
-C:\Users\Lenovo\source\repos\CommunityWeb\CommunityWeb\obj\Debug\netcoreapp2.1\Razor\Views\Candidate\ShowCandidate.g.cshtml.cs
 C:\Users\Lenovo\source\repos\CommunityWeb\CommunityWeb\obj\Debug\netcoreapp2.1\Razor\Views\Profile\Profile.g.cshtml.cs
 C:\Users\Lenovo\source\repos\CommunityWeb\CommunityWeb\obj\Debug\netcoreapp2.1\Razor\Views\Home\Member.g.cshtml.cs
