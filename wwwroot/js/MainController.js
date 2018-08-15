@@ -3,23 +3,6 @@
     $scope.localStorage = null;
     $scope.checked = 'notapp';
     $scope.profile = null;
-    function checkStorage() {
-
-        if (localStorage.length == 1) {
-            $scope.currentUser = JSON.parse(localStorage.currentUser);
-            $scope.currentUser.username = JSON.parse(localStorage.currentUser).username;
-            $scope.currentUser.role = JSON.parse(localStorage.currentUser).role;
-            $scope.currentUser.app = JSON.parse(localStorage.currentUser).app;
-            $scope.currentUser.token = JSON.parse(localStorage.currentUser).token;
-            $scope.checked = 'app';
-        }
-        
-    }
-
-    $scope.init = function () {
-        checkStorage();
-        getprofile();
-    }
 
     $scope.logout = function () {
         //debugger;
@@ -31,8 +14,8 @@
         if (localStorage.length == 1) {
             if ($scope.currentUser.role == "Recruitment") {
                 alert('ไป customer focus ในบทบาทของ' + $scope.currentUser.role);
-                //window.open('https://localhost:44397/?access_token=' + $scope.currentUser.token);
-                window.location.href = 'https://localhost:44397/?access_token=' + $scope.currentUser.token;
+                //window.open('https://localhost:8002/?access_token=' + $scope.currentUser.token);
+                window.location.href = 'http://localhost:8002/?access_token=' + $scope.currentUser.token;
             }
             else if ($scope.currentUser.role == "Candidate") {
                 alert('ไป customer focus ในบทบาทของ' + $scope.currentUser.role);
@@ -41,7 +24,19 @@
                 alert('ไป customer focus ในบทบาทของ' + $scope.currentUser.role);
             }
         }
-       
+
+    }
+
+    function checkStorage() {
+
+        if (localStorage.length == 1) {
+            $scope.currentUser = JSON.parse(localStorage.currentUser);
+            $scope.currentUser.username = JSON.parse(localStorage.currentUser).username;
+            $scope.currentUser.role = JSON.parse(localStorage.currentUser).role;
+            $scope.currentUser.app = JSON.parse(localStorage.currentUser).app;
+            $scope.currentUser.token = JSON.parse(localStorage.currentUser).token;
+            $scope.checked = 'app';
+        }
     }
 
     function getprofile() {
@@ -49,7 +44,7 @@
         if (localStorage.length == 1) {
             var req = {
                 method: 'POST',
-                url: 'http://localhost:3002/api/generateuser/getprofile',
+                url: 'http://localhost:3004/api/login/getprofile',
                 params: {
                     email: JSON.parse(localStorage.currentUser).username
                 },
@@ -61,11 +56,20 @@
                 //alert(response.data);
                 $scope.profile = response.data;
             }, function (response) {
-                alert('false');
+                $scope.currentUser = null;
+                $scope.localStorage = null;
+                $scope.checked = 'notapp';
+                $scope.profile = null;
+                AuthenticationService.Logout();
             });
 
         } else {
             console.log('login pls');
         }
+    }
+
+    $scope.init = function () {
+        checkStorage();
+        getprofile();
     }
 });

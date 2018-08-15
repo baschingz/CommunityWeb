@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "Login";
 }
 
@@ -17,7 +16,7 @@
     <div class="container">
         <div class="row justify-content-md-center">
             <div class="col-sm-6 border-right">
-                <img src="~/images/cover/banner-login.jpg" class="img-login"/>
+                <img src="~/images/cover/banner-login.jpg" class="img-login" />
             </div>
 
             <div class="col-sm-6  margin-head">
@@ -28,7 +27,7 @@
                     <div class="form-group">
                         <div class="input-group">
                             <div class="input-group-prepend">
-                                <div class="input-group-text"><i class="fas fa-user-tie"></i></div>
+                                <div class="input-group-text"><i class="fa fa-user"></i></div>
                             </div>
                             <input type="text" class="form-control" ng-model="loginForm.username" id="" placeholder="username">
                         </div>
@@ -36,7 +35,7 @@
                     <div class="form-group">
                         <div class="input-group">
                             <div class="input-group-prepend">
-                                <div class="input-group-text"><i class="fas fa-unlock-alt"></i></div>
+                                <div class="input-group-text"><i class="fa fa-unlock"></i></div>
                             </div>
                             <input type="password" class="form-control" ng-model="loginForm.password" placeholder="password">
                         </div>
@@ -52,6 +51,5 @@
 
 </div>
 @section Scripts {
-    <script src="~/js/loginController.js"></script>
+    <script src="~/js/LoginController.js"></script>
 }
-

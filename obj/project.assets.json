@@ -5789,7 +5789,7 @@
       ]
     },
     "Microsoft.CodeAnalysis.Analyzers/1.1.0": {
-      "sha512": "bmcvr0JmMoNq6nALrb6Lg6+iMwskYRvSnUHHKbXJvhywW/L2JP9y7KfRD46C4+ZBwthF+IBLMKV1tjfyiowg6g==",
+      "sha512": "3lmJj8caP/42kxUZsa+KX9FvLM6HGWPSeANDfCuJIVaPm8XUxUva7J/2SSZBC/n24KAqzTRYKt+J5TW63WO/WA==",
       "type": "package",
       "path": "microsoft.codeanalysis.analyzers/1.1.0",
       "files": [
@@ -9430,7 +9430,7 @@
       ]
     },
     "System.Linq.Queryable/4.0.1": {
-      "sha512": "Yn/WfYe9RoRfmSLvUt2JerP0BTGGykCZkQPgojaxgzF2N0oPo+/AhB8TXOpdCcNlrG3VRtsamtK2uzsp3cqRVw==",
+      "sha512": "+ccQ9Zx0Vu6tQ91Dvf/Hm8w8dBIxhJQsJqgsVCo/3Y3aAUO6D3vLf08KUpwo5LWP5yu3ywOKwZcE2jn15qXNWg==",
       "type": "package",
       "path": "system.linq.queryable/4.0.1",
       "files": [
@@ -12218,23 +12218,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Lenovo\\.nuget\\packages\\": {},
+    "C:\\Users\\Admin\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lenovo\\source\\repos\\CommunityWeb\\CommunityWeb\\CommunityWeb.csproj",
+      "projectUniqueName": "D:\\Workspace\\KMOS\\CommunityWeb\\CommunityWeb.csproj",
       "projectName": "CommunityWeb",
-      "projectPath": "C:\\Users\\Lenovo\\source\\repos\\CommunityWeb\\CommunityWeb\\CommunityWeb.csproj",
-      "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lenovo\\source\\repos\\CommunityWeb\\CommunityWeb\\obj\\",
+      "projectPath": "D:\\Workspace\\KMOS\\CommunityWeb\\CommunityWeb.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "D:\\Workspace\\KMOS\\CommunityWeb\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

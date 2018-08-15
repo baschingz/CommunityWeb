@@ -11,7 +11,7 @@ function AuthenticationService($http) {
     function Login(username, password, callback) {
         //debugger;
         if (username && password) {
-            $http.post('https://localhost:44351/api/Login', { username: username, password: password })
+            $http.post('http://localhost:3004/api/Login', { username: username, password: password })
                 .then(function (response) {
                     //debugger;
                     if (response.data) {
